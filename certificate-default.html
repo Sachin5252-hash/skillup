@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Certificate</title>
+  <style>
+    @page { size: A4 landscape; margin: 10mm; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f0f0f8;
+    }
+
+    .border-pattern {
+      margin: 15px auto;
+      border: 2px solid #fcfcfc01;
+      background-color: #e1e1e7;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h16v2h-6v6h6v8H8v-6H2v6H0V0zm4 4h2v2H4V4zm8 8h2v2h-2v-2zm-8 0h2v2H4v-2zm8-8h2v2h-2V4z' fill='%23991B1B' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+      padding: 18px;
+      width: 95%;
+      max-width: 1000px;
+    }
+
+    .congrates {
+      text-align: center;
+    }
+
+    .congrates h1 {
+      color: #1da851;
+      font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    }
+
+    .content {
+      background: white;
+      border: 2px solid #f4efef;
+      padding: 8px;
+    }
+
+    .inner-content {
+      border: 2px solid #890a0a;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #000;
+      font-family: cursive;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin: 30px 0 10px;
+      color: #444;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 10px;
+    }
+
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0 -60px;
+    }
+
+
+    .badge {
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 1px auto 0;
+    }
+
+    .badge {
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+    }
+
+
+    .signatures {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0px;
+  padding: 0 1%;
+  gap: 20px; /* increased gap slightly for better spacing */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.signature-block {
+  width: 30%;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #444;
+}
+
+.signature-img {
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.signature-label {
+  border-top: 1.5px solid #890a0a;
+  padding-top: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.signature-label span {
+  font-style: italic;
+  color: #890a0a;
+}
+
+
+    @media (max-width: 600px) {
+      .border-pattern { padding: 6px; width: 100%; }
+      .inner-content { padding: 6px; border-width: 1px; }
+      h1 { font-size: 1rem; margin-bottom: 4px; }
+      h2 { font-size: 0.85rem; margin-bottom: 2px; }
+      h3 { font-size: 0.75rem; margin: 6px 0 4px; }
+      p { font-size: 0.7rem; margin-bottom: 2px; font-weight: normal; }
+      .badge { width: 12px; height: 12px; margin-top: 4px; }
+      .signatures { margin-top: 0px; gap: 4px; padding: 0 2px; }
+      .signature-block { font-size: 0.6rem; }
+    }
+
+    @media print {
+      body { background: white; }
+      .border-pattern { width: 100%; height: 25%; background-image: none; }
+    }
+
+    .share-buttons {
+      text-align: center;
+      margin-top: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .share-buttons p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .share-buttons a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 16px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .share-buttons a.whatsapp { background-color: #25d366; }
+    .share-buttons a.whatsapp:hover { background-color: #1da851; }
+
+    .share-buttons a.facebook { background-color: #3b5998; }
+    .share-buttons a.facebook:hover { background-color: #2d4373; }
+
+    .share-buttons a.instagram { background-color: #E1306C; }
+    .share-buttons a.instagram:hover { background-color: #b92a59; }
+  </style>
+</head>
+<body>
+  <div class="congrates">
+    <h1>🎉 Congratulations</h1>
+    <h3>Your certificate has been generated!</h3>
+  </div>
+
+  <div class="border-pattern">
+    <div class="content">
+      <div class="inner-content">
+        <h1>Certificate of Excellence</h1>
+        <h3>This Certificate Is Proudly Awarded To</h3>
+        <h2><i>Sachin Sharma</i></h2>
+        <p>Has Completed</p>
+        <p>Python Basic Course</p>
+        <p>on June 20, 2025</p>
+        <p>Achieving Grade: <b>A+ / Distinction</b>. Your outstanding performance and dedication are truly commendable.</p>
+
+        <div class="badge-container">
+          <div class="badge"></div>
+        </div>
+
+        <div class="signatures">
+
+            <div class="signature-block">
+            <img src="https://www.tippsysake.com/_next/image?url=https:%2F%2Fcdn.tippsysake.com%2Fassets%2Four-story%2Fgenki-signature-2304.png&w=1080&q=75" alt="Instructor Signature" class="signature-img" />
+            <div class="signature-label">
+                Instructor<br />
+                <span>(Signature)</span>
+            </div>
+            </div>
+
+            
+
+            <div class="signature-block">
+            <img src="https://www.tippsysake.com/_next/image?url=https:%2F%2Fcdn.tippsysake.com%2Fassets%2Four-story%2Fgenki-signature-2304.png&w=1080&q=75" alt="Instructor Signature" class="signature-img" />
+            <div class="signature-label">
+                Organizer<br />
+                <span>(Signature)</span>
+            </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="share-buttons">
+    <p>📤 Share your achievement:</p>
+    <a class="whatsapp"
+      href="https://wa.me/?text=Check%20out%20my%20certificate!%20%0A%0A%20https://yourdomain.com/certificate.html"
+      target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/certificate.html"
+      target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a class="instagram"
+      href="https://www.instagram.com/"
+      target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+</body>
+</html>
