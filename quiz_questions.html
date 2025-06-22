@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    /* Fixed Header Styles */
+    .header-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .header-fixed h1 {
+      font-size: 22px;
+      margin: 0;
+      color: #333;
+      text-align: center;
+      font-size: larger;
+
+
+    }
+  .head_container {
+    position: fixed;
+    top: 0;
+    left: 60;
+    width: 100%;         
+    height: 100px;         
+    background: #000000;
+    color: #ffffff;         /* Make text visible on black */
+    z-index: 1000;          /* Keep it on top of other elements */
+    display: flex;          /* Flexbox for easy layout */
+    align-items: center;    /* Vertically center content */
+    justify-content: space-between; /* Spread out elements if needed */
+    padding: 0 75px;        /* Add side padding */
+    box-sizing: border-box; /* Ensure padding doesn’t break layout */
+  }
+
+
+    /* Add space below fixed header */
+    .spacer {
+      height: 80px;
+    }
+
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin-bottom: 25px;
+      font-size: larger;
+
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .header-fixed h1 {
+        font-size: 18px;
+      }
+
+      .header-fixed p {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Header -->
+  <div class="head_container">
+    <h1>🐍 Python Quiz</h1>
+    
+    </div>
+
+  <!-- Spacer to push content below fixed header -->
+  <div class="spacer"></div>
+
+  <!-- Quiz Starts -->
+  <div class="quiz-container">
+
+    <!-- Questions (your provided content) -->
+    <!-- Paste your questions here -->
+    <!-- START COPY FROM BELOW -->
+
+    <div class="question">
+      <p><strong>1. What is the output of `print(type([]))`?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A">A) &lt;class 'list'&gt;</label>
+        <label><input type="radio" name="q1" value="B">B) &lt;class 'tuple'&gt;</label>
+        <label><input type="radio" name="q1" value="C">C) &lt;class 'set'&gt;</label>
+        <label><input type="radio" name="q1" value="D">D) &lt;class 'dict'&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Which of the following is used to define a function in Python?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A">A) function</label>
+        <label><input type="radio" name="q2" value="B">B) define</label>
+        <label><input type="radio" name="q2" value="C">C) def</label>
+        <label><input type="radio" name="q2" value="D">D) func</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>3. What will be the output of `print(2 ** 3 ** 2)`?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A">A) 64</label>
+        <label><input type="radio" name="q3" value="B">B) 512</label>
+        <label><input type="radio" name="q3" value="C">C) 729</label>
+        <label><input type="radio" name="q3" value="D">D) 36</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>4. Which keyword is used for exception handling in Python?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A">A) catch</label>
+        <label><input type="radio" name="q4" value="B">B) error</label>
+        <label><input type="radio" name="q4" value="C">C) exception</label>
+        <label><input type="radio" name="q4" value="D">D) try</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>5. What data type is the object below? `x = {1, 2, 3}`</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A">A) List</label>
+        <label><input type="radio" name="q5" value="B">B) Tuple</label>
+        <label><input type="radio" name="q5" value="C">C) Dictionary</label>
+        <label><input type="radio" name="q5" value="D">D) Set</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>6. What does `len("Hello")` return?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="A">A) 4</label>
+        <label><input type="radio" name="q6" value="B">B) 5</label>
+        <label><input type="radio" name="q6" value="C">C) 6</label>
+        <label><input type="radio" name="q6" value="D">D) Error</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>7. What is the output of: `print(bool(0))`?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="A">A) True</label>
+        <label><input type="radio" name="q7" value="B">B) False</label>
+        <label><input type="radio" name="q7" value="C">C) 0</label>
+        <label><input type="radio" name="q7" value="D">D) 1</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>8. Which of the following is a mutable data type?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="A">A) str</label>
+        <label><input type="radio" name="q8" value="B">B) tuple</label>
+        <label><input type="radio" name="q8" value="C">C) list</label>
+        <label><input type="radio" name="q8" value="D">D) int</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>9. What is the correct file extension for Python files?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="A">A) .pt</label>
+        <label><input type="radio" name="q9" value="B">B) .pyt</label>
+        <label><input type="radio" name="q9" value="C">C) .py</label>
+        <label><input type="radio" name="q9" value="D">D) .p</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>10. What will be the output of: `print("hello" * 2)`?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="A">A) hello</label>
+        <label><input type="radio" name="q10" value="B">B) hellohello</label>
+        <label><input type="radio" name="q10" value="C">C) hello hello</label>
+        <label><input type="radio" name="q10" value="D">D) Error</label>
+      </div>
+    </div>
+
+    <!-- END COPY -->
+
+    <button class="submit-btn">Submit Answers</button>
+  </div>
+
+</body>
+</html>
